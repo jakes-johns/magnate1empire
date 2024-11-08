@@ -11,15 +11,9 @@ body {
     color: #333;
     padding: 20px;
     background-image: url('/static/images/background.jpg');
-    background-size: cover; /* Ensures the image covers the whole area */
-    background-repeat: no-repeat; /* Prevents tiling */
-    background-position: center; /* Centers the image */
-}
-
-    
-h1 {
-    color: #faba0aea;
-    font-weight: bold;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 /* Header Section */
@@ -28,6 +22,7 @@ h1 {
     font-family: Papyrus, fantasy;
     align-items: center;
     margin-bottom: 20px;
+    justify-content: space-between;
 }
 
 header {
@@ -40,8 +35,8 @@ header {
 
 .logo {
     display: inline-block;
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     margin-right: 15px;
     background-image: url('/static/images/logo.png');
     background-size: contain;
@@ -115,4 +110,69 @@ a:hover {
     aspect-ratio: 16 / 9;
     margin-top: 20px;
     border-radius: 8px;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+
+    body {
+        padding: 10px; /* Reduced padding for smaller screens */
+    }
+
+    .site-header {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 15px;
+    }
+
+    .logo {
+        width: 150px; /* Smaller logo for mobile */
+        height: 150px;
+    }
+
+    .site-title {
+        font-size: 20px; /* Smaller title font */
+    }
+
+    .shoes-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .shoe-item {
+        width: 100%; /* Full width for shoe items */
+        max-width: 250px; /* Max width for shoe items */
+    }
+
+    .buy-button {
+        padding: 8px 16px; /* Adjust button size for mobile */
+        font-size: 14px;
+    }
+
+    .image-background {
+        aspect-ratio: 16 / 9; /* Ensure the aspect ratio fits well */
+        margin-top: 10px;
+    }
+}
+
+/* Extra Small Screens (e.g., mobile portrait) */
+@media (max-width: 480px) {
+    .site-title {
+        font-size: 18px; /* Even smaller font for ultra-small screens */
+    }
+
+    .shoe-item {
+        max-width: 100%; /* Allow shoe items to fully fill the screen width */
+        padding: 8px;
+    }
+
+    .buy-button {
+        font-size: 12px; /* Smaller font size for mobile buttons */
+    }
+
+    .logo {
+        width: 120px; /* Further reduce logo size */
+        height: 120px;
+    }
 }
